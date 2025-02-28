@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (g++)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "miDebuggerPath": "/usr/bin/gdb",  // 调试器路径（根据系统修改）
+            "preLaunchTask": "g++ build active file",  // 指定任务
+            "miDebuggerArgs": "",
+            "logging": {
+                "engineLogging": false
+            },
+            "visualizerFile": "${workspaceFolder}/.vscode/visualizer.natvis"
+        }
+    ]
+}
